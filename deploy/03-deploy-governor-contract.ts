@@ -20,9 +20,9 @@ const deployGovernorContract: DeployFunction = async function (
     args: [
       governanceToken.address,
       timeLock.address,
-      VOTING_DELAY,
-      VOTING_PERIOD,
       QUORUM_PERCENTAGE,
+      VOTING_PERIOD,
+      VOTING_DELAY,
     ],
     log: true,
   });
@@ -31,3 +31,4 @@ const deployGovernorContract: DeployFunction = async function (
 };
 
 export default deployGovernorContract;
+deployGovernorContract.tags = ['all', 'governor'];
